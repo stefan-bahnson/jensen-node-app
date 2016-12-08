@@ -16,8 +16,7 @@ app.listen(port, function () {
 app.use(bodyParser.json());
 
 // include files we need for the site to run
-app.use('/jquery', express.static(path.join(__dirname, 'node_modules/jquery/dist')));
-app.use('/public', express.static(path.join(__dirname, 'public')));
+app.use('/dist', express.static(path.join(__dirname, 'dist')));
 
 /*
 NODE APP (routing)
@@ -41,12 +40,12 @@ localhost:3333/about vs. localhost:3333/public/about.html
 
 // serves the index.html when "localhost:3333" is visited
 app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, 'public/index.html'));
+  res.sendFile(path.join(__dirname, 'dist/index.html'));
 });
 
 // serves the about.html when "localhost:3333/about" is visited
 app.get('/about', function (req, res) {
-  res.sendFile(path.join(__dirname, 'public/about.html'));
+  res.sendFile(path.join(__dirname, 'dist/about.html'));
 });
 
 

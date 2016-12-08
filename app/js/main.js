@@ -1,12 +1,14 @@
-$(document).ready(function() {
+import '../css/style.scss';
+
+$(document).ready(function () {
   $.ajax({
     url: 'http://localhost:3333/api/v1/posts',
     type: 'GET',
-    success: function(data) {
+    success: function (data) {
       console.log(data);
       renderResponse(data, '#posts');
     },
-    error: function(err) {
+    error: function (err) {
       console.log(err);
     }
   });
@@ -14,11 +16,11 @@ $(document).ready(function() {
   $.ajax({
     url: 'http://localhost:3333/api/v1/posts/1',
     type: 'GET',
-    success: function(data) {
+    success: function (data) {
       console.log(data);
       renderResponse(data, '#post');
     },
-    error: function(err) {
+    error: function (err) {
       console.log(err);
     }
   });
