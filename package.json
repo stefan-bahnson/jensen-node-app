@@ -1,0 +1,16 @@
+{
+  "name": "blog-node-app",
+  "version": "1.0.0",
+  "description": "A node express web app and API",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "stefanbahnson@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "jquery": "^3.1.1"
+  }
+}
