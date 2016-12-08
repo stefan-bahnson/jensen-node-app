@@ -12,7 +12,7 @@ app.listen(port, function () {
   console.log('server is running on localhost:' + port);
 });
 
-// This enables us to send data with a request e.g. POST request
+// This enables us to send data with a req e.g. POST req
 app.use(bodyParser.json());
 
 // include files we need for the site to run
@@ -59,8 +59,8 @@ This is where we serve our data from different paths in our API.
 */
 
 // API overview of the endpoints that are available
-app.get('/api/v1/', function (request, response) {
-  response.json([
+app.get('/api/v1/', function (req, res) {
+  res.json([
     {
       endpoint: 'posts',
       href: 'http://localhost:3333/api/v1/posts'
@@ -68,13 +68,13 @@ app.get('/api/v1/', function (request, response) {
   ]);
 });
 
-app.get('/api/v1/posts', function (request, response) {
-  response.send(postsDB);
+app.get('/api/v1/posts', function (req, res) {
+  res.send(postsDB);
 });
 
-app.get('/api/v1/posts/:postID', function (request, response) {
+app.get('/api/v1/posts/:postID', function (req, res) {
 
-  var id = parseInt(request.params.postID);
+  var id = parseInt(req.params.postID);
 
   var post = postsDB.find(function(post) {
     return id === post.id;
@@ -84,11 +84,11 @@ app.get('/api/v1/posts/:postID', function (request, response) {
 
   if (typeof post === 'undefined') post = 'Sorry, cant find post with id: ' + id;
 
-  response.json(post);
+  res.json(post);
 });
 
-app.post('/api/v1/posts', function (request, response) {
-  var newPost = request.body;
+app.post('/api/v1/posts', function (req, res) {
+  var newPost = req.body;
   postsDB.push(newPost);
-  response.send('ok');
+  res.send('ok');
 });
