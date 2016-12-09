@@ -5,7 +5,7 @@
 - Uses webpack to bundle your javascript and css
 - Includes Babel transpiler for ES2015 javascript syntax.
 - Includes SASS preprocessing to handle your CSS
-- Includes jQuery
+- Includes React
 
 ### Getting started
 1. Install node.js

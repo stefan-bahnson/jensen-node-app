@@ -4,12 +4,10 @@ body {
 
 h1 span {
   text-transform: uppercase;
-  color: cadetblue;
 }
 
 h3 {
   text-transform: uppercase;
-  color: cadetblue;
 
   a {
     color: #414141;
@@ -29,10 +27,24 @@ nav a:hover {
   background-color: cadetblue;
   color: #ffffff;
 }
+.posts {
+  background-color: #437071;
+  padding: 20px;
 
-.post {
-  display: inline-block;
-  box-shadow: 0 2px 6px #c9c9c9;
+  .post {
+    display: inline-block;
+    box-shadow: 0 2px 6px #000000;
+    background-color: white;
+    padding: 16px;
+    margin: 8px;
+  }
+}
+
+.tag {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #437071;
+  color: white;
   padding: 16px;
-  margin-bottom: 40px;
 }

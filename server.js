@@ -23,19 +23,19 @@ NODE APP (routing)
 Enables us to load different html files dependening on a route e.g.
 
   "/"       - loads the index.html file
-  "/about"  - loads the about.html file
+  "/about"  - loads the post.html file
 
 
 Instead of pointing to the file itself e.g.
 
   "/index.html"          - loads the index.html file
-  "/public/about.html"   - loads the about.html file
+  "/public/post.html"   - loads the post.html file
 
 Why should we do this?
 Because this will give the user a nicer looking url. The user doesn't
 need to know what files we are loading.
 
-localhost:3333/about vs. localhost:3333/public/about.html
+localhost:3333/about vs. localhost:3333/public/post.html
 */
 
 // serves the index.html when "localhost:3333" is visited
@@ -43,9 +43,9 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'dist/index.html'));
 });
 
-// serves the about.html when "localhost:3333/about" is visited
-app.get('/about', function (req, res) {
-  res.sendFile(path.join(__dirname, 'dist/about.html'));
+// serves the post.html when "localhost:3333/about" is visited
+app.get('/post', function (req, res) {
+  res.sendFile(path.join(__dirname, 'dist/post.html'));
 });
 
 
