@@ -1,14 +1,16 @@
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var CopyWebpackPlugin = require('copy-webpack-plugin');
 var path = require('path');
-var webpack = require("webpack");
 
 module.exports = {
-  entry: './js/main',
+  entry: {
+    posts: './js/Posts',
+    post: './js/Post'
+  },
   context: path.join(__dirname, 'app'),
   output: {
     path: './dist',
-    filename: "bundle.js",
+    filename: "[name].js",
     publicPath: '/'
   },
   devServer: {
@@ -23,7 +25,7 @@ module.exports = {
         exclude: /node_modules/,
         loader: 'babel-loader',
         query: {
-          presets: [ 'es2015' ]
+          presets: [ 'es2015', 'react' ]
         }
       },
       {
@@ -38,12 +40,8 @@ module.exports = {
   },
   plugins: [
     new ExtractTextPlugin('style.css'),
-    new webpack.ProvidePlugin({
-      $: "jquery",
-      jQuery: "jquery"
-    }),
     new CopyWebpackPlugin([
-      { from: '*.html', to: '../dist' },
+      { from: '*.html', to: '../dist' }
     ])
   ]
 };
