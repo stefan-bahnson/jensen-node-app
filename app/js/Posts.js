@@ -20,6 +20,7 @@ class App extends Component {
         <nav>
           <a href="/dist/post.html">go to the post.html</a>
           <a href="/post">go to the Post route</a>
+          <a href="/some-route">go to 404 not found</a>
           <a href="/api/v1">go to the REST API route</a>
         </nav>
 
