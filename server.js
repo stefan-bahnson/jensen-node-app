@@ -49,7 +49,6 @@ app.get('/post', function (req, res) {
 });
 
 
-
 /*
 REST API (endpoints)
 
@@ -90,4 +89,12 @@ app.post('/api/v1/posts', function (req, res) {
   var newPost = req.body;
   postsDB.push(newPost);
   res.send('ok');
+});
+
+/*
+catch all route if the visited route does not exist.
+Needs to be declared as the last route.
+*/
+app.get('*', function(req, res) {
+  res.sendFile(path.join(__dirname, 'dist/404.html'));
 });
