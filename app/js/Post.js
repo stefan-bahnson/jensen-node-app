@@ -6,7 +6,7 @@ import { getPostById } from './ajax';
 
 const Post = ({ post }) => (
   <div>
-    <div className="tag">Rendered by REACT</div>
+    <div className="tag">Rendered with REACT</div>
     <h1>Welcome to the <span>about.html</span></h1>
     <nav>
       <a href="/">go back</a>

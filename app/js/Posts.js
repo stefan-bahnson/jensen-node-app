@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
+import JsonView from './dev/JsonView';
+
 import { getPosts } from './ajax';
 
 import '../sass/main.scss';
@@ -15,7 +17,7 @@ class App extends Component {
 
     return (
       <div className="container">
-        <div className="tag">Rendered by REACT</div>
+        <div className="tag">Rendered with REACT</div>
         <h1>Welcome to the <span>index.html</span></h1>
         <nav>
           <a href="/dist/post.html">go to the post.html</a>
@@ -25,7 +27,7 @@ class App extends Component {
         </nav>
 
         <h3>Response data from <a href="/api/v1/posts">/api/v1/posts/</a></h3>
-        <pre>{ JSON.stringify(posts, null, 2) }</pre>
+        <JsonView data={ posts } label="Posts" isCollapsed={ true }/>
 
         <h3>Example rendering a post with the response data</h3>
         <div className="posts">

@@ -1,0 +1,28 @@
+.json-view {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #414141;
+  color: white;
+  padding: 16px;
+  max-width: 400px;
+  transition: all 400ms;
+
+  &.collapsed {
+    max-width: 0;
+    right: -32px;
+  }
+
+  .btn.close {
+    position: absolute;
+    top: 0;
+    left: -54px;
+    background-color: black;
+    padding: 16px;
+    font-size: 10px;
+  }
+
+  pre {
+    height: 100vh;
+  }
+}
