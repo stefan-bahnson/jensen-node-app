@@ -20,14 +20,15 @@ class App extends Component {
         <div className="tag">Rendered with REACT</div>
         <h1>Welcome to the <span>index.html</span></h1>
         <nav>
-          <a href="/dist/post.html">go to the post.html</a>
-          <a href="/post">go to the Post route</a>
-          <a href="/some-route">go to 404 not found</a>
-          <a href="/api/v1">go to the REST API route</a>
+          <div><a href="/post">go to the Post route</a></div>
+          <div><a href="/some-route">go to 404 not found</a></div>
+          <div><a href="/api/v1">go to the REST API route</a></div>
+          <div><a href="/dist/post.html">go to the post.html</a></div>
         </nav>
 
-        <h3>Response data from <a href="/api/v1/posts">/api/v1/posts/</a></h3>
-        <JsonView data={ posts } label="Posts" isCollapsed={ true }/>
+        <JsonView data={ posts }
+                  isCollapsed={ false }
+                  label={ <a href="/api/v1/posts">/api/v1/posts/</a> } />
 
         <h3>Example rendering a post with the response data</h3>
         <div className="posts">

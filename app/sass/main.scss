@@ -14,8 +14,12 @@ h3 {
   }
 }
 
-nav a {
-  display: block;
+nav {
+  display: flex;
+  margin: 40px 0
+}
+
+nav div a {
   text-decoration: none;
   color: #414141;
   text-transform: uppercase;
@@ -23,10 +27,11 @@ nav a {
   transition: all 300ms;
 }
 
-nav a:hover {
+nav div a:hover {
   background-color: cadetblue;
   color: #ffffff;
 }
+
 .posts {
   background-color: #437071;
   padding: 20px;
@@ -42,7 +47,7 @@ nav a:hover {
 
 .tag {
   position: absolute;
-  top: 0;
+  bottom: 0;
   right: 0;
   background-color: #437071;
   color: white;

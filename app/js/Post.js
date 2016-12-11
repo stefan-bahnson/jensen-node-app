@@ -9,7 +9,7 @@ const Post = ({ post }) => (
     <div className="tag">Rendered with REACT</div>
     <h1>Welcome to the <span>about.html</span></h1>
     <nav>
-      <a href="/">go back</a>
+      <div><a href="/">go back</a></div>
     </nav>
 
     <h3>Response data from <a href="/api/v1/posts/1">/api/v1/posts/1</a></h3>
