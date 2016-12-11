@@ -12,7 +12,7 @@ const Post = ({ post }) => (
       <a href="/">go back</a>
     </nav>
 
-    <h3>Response data from <a href="/api/v1/posts">/api/v1/posts/</a></h3>
+    <h3>Response data from <a href="/api/v1/posts/1">/api/v1/posts/1</a></h3>
     <pre>{ JSON.stringify(post, null, 2) }</pre>
 
     <h3>Example rendering a post with the response data</h3>
